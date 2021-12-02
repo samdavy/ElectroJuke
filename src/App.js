@@ -15,6 +15,4 @@ function App() {
   );
 }
 
-console.log("app js");
-
 export default App;
