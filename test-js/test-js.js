@@ -1,6 +1,8 @@
 // const songs = ['song0', 'song1', 'song2'];
 // const listItems = songs.map((song) => <li>{song}</li>);
 
+const fetch = require('cross-fetch');
+
 let songs = {
     songList: [
       {
@@ -133,16 +135,21 @@ let songs = {
   
   console.log(songs);
 
+  var songsObj;
+  const token = 'BQCasgbZN0YXyV7o9jQXj9G7yzTL5x_2f7cJvx6nAdZvU8U8Lv7UA6B5cX-aDoUVIKki_PYrmcde7mpRhJ8jbQc9x7n6h9rB5YPWgKsfETIF3QI3UTsmEXApk-GrzZEQINCaAEj3qHZbVF8W'
 
   fetch('https://api.spotify.com/v1/playlists/37i9dQZEVXbLRQDuF5jeBp/tracks?market=US&fields=items(track)&limit=10', {
       method: 'GET', headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer BQBouB4HWgf3dGMhHhlyGkw4qTDY3k6qXLJ_bu50pJ9umpdgL5Mfrz2XX1ZpxvNiSNifU4d81x-oOiCp6zjPZv11me5_mlrWyvF8BiOf8PqYIix9GLRgKHhOkP-VGzqnCbc9_XJx3pe-ckwx'
+          'Authorization': `Bearer ${token}`
       }
   })
       .then((response) => {
           console.log(response.json().then(
-              (data) => { console.log(data) }
+              (data) => { 
+                songsObj = data;
+                console.log(songsObj);
+            }
           ));
       });
