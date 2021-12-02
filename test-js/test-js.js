@@ -139,7 +139,7 @@ let songs = {
   console.log(songs);
 
   var songsObj;
-  const token = 'BQCasgbZN0YXyV7o9jQXj9G7yzTL5x_2f7cJvx6nAdZvU8U8Lv7UA6B5cX-aDoUVIKki_PYrmcde7mpRhJ8jbQc9x7n6h9rB5YPWgKsfETIF3QI3UTsmEXApk-GrzZEQINCaAEj3qHZbVF8W'
+  const token = ''
 
   fetch('https://api.spotify.com/v1/playlists/37i9dQZEVXbLRQDuF5jeBp/tracks?market=US&fields=items(track)&limit=10', {
       method: 'GET', headers: {
