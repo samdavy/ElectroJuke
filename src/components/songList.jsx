@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-const songs = ['song0', 'song1', 'song2'];
-const listItems = songs.map((song) => <li>{song}</li>);
+import Song from './song';
 
 class SongList extends React.Component {
     render() { 
