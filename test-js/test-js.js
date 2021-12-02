@@ -2,6 +2,9 @@
 // const listItems = songs.map((song) => <li>{song}</li>);
 
 const fetch = require('cross-fetch');
+var pretty = require('js-object-pretty-print').pretty,
+    address,
+    value;
 
 let songs = {
     songList: [
@@ -149,7 +152,7 @@ let songs = {
           console.log(response.json().then(
               (data) => { 
                 songsObj = data;
-                console.log(songsObj);
+                console.log(pretty(songsObj));
             }
           ));
       });
